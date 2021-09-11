@@ -1,7 +1,7 @@
  int dia = 10;
   int mes = 12;
   int year = 2005;
-  int dia_actual = 11;
+  int dia_actual = 10;
   int mes_actual = 9;
   int year_actual = 2021;
   int dia_agrupacion = 0;
