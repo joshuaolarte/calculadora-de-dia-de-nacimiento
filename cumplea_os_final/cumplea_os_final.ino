@@ -1,7 +1,7 @@
  int dia = 10;
   int mes = 12;
   int year = 2005;
-  int dia_actual = 10;
+  int dia_actual = 11;
   int mes_actual = 9;
   int year_actual = 2021;
   int dia_agrupacion = 0;
@@ -10,25 +10,18 @@
   int dia_resta;
   int diferencia;
   int contador;
+  boolean flag = 0;
   String dia_hoy = "sabado";
   
 void setup() {
   Serial.begin(9600);
 
 }
-void algoritmo(){
-   for(contador=0; contador < diferencia; contador ++){
-    
-      
-      dia_resta ++;
- 
-      if(dia_resta == 8){
-        dia_resta = 0;
-         
-      }
-    
- }
-  mes_actual ++;
+void suma_de_meses{
+  while(flag == false){
+
+
+  }
 }
   void algoritmoFinal(){
      diferencia = dia;
@@ -45,34 +38,34 @@ void algoritmo(){
    }
   }
 void loop() {
-// if (Serial.available() > 0)
-//    {
-//       
-//        String dia_str = Serial.readStringUntil('/');
-//        dia = dia_str.toInt();
-//
-//        String mes_str = Serial.readStringUntil('/');
-//        mes = mes_str.toInt();
-//
-//        String year_str = Serial.readStringUntil(';');
-//        year = year_str.toInt();
-//
-//        String dia_actual_str = Serial.readStringUntil('/');
-//        dia_actual = dia_actual_str.toInt();
-//
-//        String mes_actual_str = Serial.readStringUntil('/');
-//        mes_actual = mes_actual_str.toInt();
-//
-//        String year_actual_str = Serial.readStringUntil(';');
-//        year_actual = year_actual_str.toInt();
-//         
-//        String dia_hoy_str = Serial.readStringUntil('\n');
-//        dia_hoy_str.trim();
-//        dia_hoy = dia_hoy_str;
-//
-//    
-//       
-//         
+ if (Serial.available() > 0)
+    {
+       
+        String dia_str = Serial.readStringUntil('/');
+        dia = dia_str.toInt();
+
+        String mes_str = Serial.readStringUntil('/');
+        mes = mes_str.toInt();
+
+        String year_str = Serial.readStringUntil(';');
+        year = year_str.toInt();
+
+        String dia_actual_str = Serial.readStringUntil('/');
+        dia_actual = dia_actual_str.toInt();
+
+        String mes_actual_str = Serial.readStringUntil('/');
+        mes_actual = mes_actual_str.toInt();
+
+        String year_actual_str = Serial.readStringUntil(';');
+        year_actual = year_actual_str.toInt();
+         
+        String dia_hoy_str = Serial.readStringUntil('\n');
+        dia_hoy_str.trim();
+        dia_hoy = dia_hoy_str;
+
+    
+       
+         
 
  // 10/12/2005; 10/09/2021;lunes
  
@@ -135,70 +128,88 @@ void loop() {
     dia_resta = dia_agrupacion;
   switch (mes_actual) {
   case 1:
-    diferencia = dias_enero;
-      algoritmo();
+    diferencia = diferencia + dias_enero;
    if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
     break;
   case 2:
-   diferencia = dias_febrero;
-      algoritmo();
+    diferencia = diferencia + dias_febrero;
    if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 3:
-    diferencia = dias_marzo;
-      algoritmo();
-    if(mes_actual == mes){
+     diferencia = diferencia + dias_marzo;
+     if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 4:
-     diferencia = dias_abril;
-      algoritmo();
+      diferencia = diferencia + dias_abril;
   if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
     break;
   case 5:
-     diferencia = dias_mayo;
-      algoritmo();
+      diferencia = diferencia + dias_mayo;
   if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 6:
-    diferencia = dias_junio;
-      algoritmo();
+     diferencia = diferencia + dias_junio;
    if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 7:
-   diferencia = dias_julio;
-      algoritmo();
-   if(mes_actual == mes){
-     algoritmoFinal();
-    break;
-  case 8:
- diferencia = dias_agosto;
-      algoritmo();
-   if(mes_actual == mes){
-     algoritmoFinal();
-    break;
-    case 9:
-    diferencia = dias_septiembre;
-      algoritmo();
+   diferencia = diferencia + dias_julio;
     if(mes_actual == mes){
      algoritmoFinal();
+   }
+   mes_actual ++;
+    break;
+  case 8:
+  diferencia = diferencia + dias_agosto;
+    if(mes_actual == mes){
+     algoritmoFinal();
+   }
+   mes_actual ++;
+    break;
+    case 9:
+    diferencia = diferencia + dias_septiembre;
+    if(mes_actual == mes){
+     algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 10:
-   diferencia = dias_octubre;
-      algoritmo();
+    diferencia = diferencia + dias_octubre;
+       if(mes_actual == mes){
+     algoritmoFinal();
+   }
+   mes_actual ++;
     break;
   case 11:
-     diferencia = dias_noviembre;
-      algoritmo();
+      diferencia = diferencia + dias_noviembre;
+       if(mes_actual == mes){
+     algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 12:
-  diferencia = dias_diciembre;
-      algoritmo();
+   diferencia = diferencia + dias_diciembre;
+       if(mes_actual == mes){
+     algoritmoFinal();
+   }
+   mes_actual ++;
     break;
     case 13:
     mes_actual = 1;
