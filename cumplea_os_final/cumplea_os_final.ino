@@ -64,6 +64,7 @@ void setup() {
   algoritmoFinal();
 
   Serial.println(dias_acum);
+  
 }
 
   void algoritmoFinal(){
